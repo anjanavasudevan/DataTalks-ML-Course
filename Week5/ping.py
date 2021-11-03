@@ -1,15 +1,14 @@
-# Hello world program to get started with flask
+# Test file for pinging
+# Hello world file for getting started with flask
 
-# Import flask
+# import the modules
 from flask import Flask
 
-# Set app name (here the app name is set as the name of file (using '__name__'))
-app = Flask(__name__)
+# Naming the service / app
+app = Flask("ping")
 
-# Define the route (which URL should trigger the app. Defaults will trigger local dummy values)
-
-
-@app.route('/')
-# Code to execute
-def hello_world():
-    return 'Hello, World!'
+# Defining the route - URL which will trigger this file
+@app.route("/", methods=["GET"])
+# Our dummy function:
+def ping():
+    return "Hello World!\nPONG"
