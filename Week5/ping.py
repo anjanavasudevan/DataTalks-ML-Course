@@ -12,3 +12,7 @@ app = Flask("ping")
 # Our dummy function:
 def ping():
     return "Hello World!\nPONG"
+
+
+if (__name__ == "__main__"):
+    app.run(debug=True)
